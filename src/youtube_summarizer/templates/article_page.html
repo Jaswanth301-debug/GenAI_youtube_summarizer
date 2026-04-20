@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ article_title }}</title>
+  <meta name="description" content="{{ seo_description }}">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0f766e;
+      --line: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 20% -10%, #ccfbf1 0%, transparent 35%), var(--bg);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 20px 70px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { margin-top: 0; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+    hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
+    .source {
+      margin-top: 26px;
+      font-size: 0.93rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article class="card">
+      {{ body_html | safe }}
+      <hr>
+      <p class="source"><strong>Source:</strong> <a href="{{ source_url }}">{{ source_url }}</a></p>
+    </article>
+  </main>
+</body>
+</html>
