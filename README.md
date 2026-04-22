@@ -1,4 +1,4 @@
-# YouTube Summarizer + Article Generator
+# YouTube Summarizer & Article Generator
 
 A complete Generative-AI pipeline that:
 
